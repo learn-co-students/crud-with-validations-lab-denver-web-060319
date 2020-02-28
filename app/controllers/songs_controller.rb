@@ -6,8 +6,6 @@ class SongsController < ApplicationController
    end
 
    def show
-    # raise params.inspect
-    @song = Song.find(params[:id])
    end
 
    def new
