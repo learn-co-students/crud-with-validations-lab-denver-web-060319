@@ -1,0 +1,47 @@
+<h1>All Songs</h1>
+
+<h4><%= button_to "Create New Song", new_song_path, method: :get %></h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Release Year</th>
+            <th>Genre</th>
+            <th>Artist</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @songs.each do |song| %>
+            <tr>
+                <td><%= song.title %></td>
+                <td align="center"><%= song.release_year %></td>
+                <td><%= song.genre %></td>
+                <td><%= song.artist_name %></td>
+                <td><%= button_to "Edit Song", edit_song_path(song.id), method: :get %></td>
+                <td><%= button_to "Song Show Page", song_path(song), method: :get %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
